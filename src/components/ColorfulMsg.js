@@ -8,6 +8,7 @@ import React from "react";
 const Msg = props => {
   return (
     <>
+      {/*これがJSXでのコメントだっ！！！*/}
       <p style={{ color: props.color }}>{props.message}</p>
     </>
   );

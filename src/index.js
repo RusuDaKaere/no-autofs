@@ -11,8 +11,12 @@ import ColorfulMsg from "./components/ColorfulMsg";
 const App = () => {
   return (
     <>
+      {/*これがJSXでのコメントだ*/}
       <h2>REACTハンズオン！</h2>
       <ColorfulMsg color="blue" message="Reactは難しくないよ～" />
+      <ColorfulMsg color="green" message="Vueも難しくないよ～" />
+      <ColorfulMsg color="red" message="Angularは，，，" />
+      <ColorfulMsg color="red">testtest</ColorfulMsg>
     </>
   );
 };
@@ -21,4 +25,4 @@ const App = () => {
 ReactDOM.render(<App />, document.getElementById("root"));
 
 //props コンポーネントへの引数的な
-//ColorfulMsg color="blue"/>
+//<ColorfulMsg color="blue"/>
