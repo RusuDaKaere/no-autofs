@@ -10,8 +10,15 @@ import ColorfulMsg from "./components/ColorfulMsg";
 class App extends React.Component {
   constructor(props) {
     super();
-    this.state = {};
+    this.state = {
+      count: 0
+    };
   }
+
+  handleClick = () => {
+    const newcount = this.state.count + 1;
+    this.setState({ count: newcount });
+  };
 
   // class にはrenderが必要
   render() {
@@ -23,6 +30,7 @@ class App extends React.Component {
         <ColorfulMsg color="green" message="Vueも難しくないよ～" />
         <ColorfulMsg color="red" message="Angularは，，，" />
         <ColorfulMsg color="red">testtest</ColorfulMsg>
+        <button onClick={this.handleClick}>{this.state.count}</button>
       </>
     );
   }
